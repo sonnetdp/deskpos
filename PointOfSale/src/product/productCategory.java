@@ -37,8 +37,8 @@ public class productCategory extends javax.swing.JFrame {
         product_name = new javax.swing.JFormattedTextField();
         brand_name = new javax.swing.JFormattedTextField();
         jLabel5 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        save = new javax.swing.JButton();
+        showAll = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -82,9 +82,14 @@ public class productCategory extends javax.swing.JFrame {
 
         jLabel5.setText("Parent ");
 
-        jButton1.setText("Save");
+        save.setText("Save");
+        save.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                saveActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("Show all");
+        showAll.setText("Show all");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -94,9 +99,9 @@ public class productCategory extends javax.swing.JFrame {
                 .addGap(36, 36, 36)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton2)
+                        .addComponent(showAll)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton1))
+                        .addComponent(save))
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(jPanel2Layout.createSequentialGroup()
                             .addComponent(jLabel2)
@@ -133,8 +138,8 @@ public class productCategory extends javax.swing.JFrame {
                     .addComponent(jLabel5))
                 .addGap(30, 30, 30)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(save)
+                    .addComponent(showAll))
                 .addContainerGap(107, Short.MAX_VALUE))
         );
 
@@ -159,6 +164,10 @@ public class productCategory extends javax.swing.JFrame {
     private void parent_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_parent_idActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_parent_idActionPerformed
+
+    private void saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_saveActionPerformed
 
     /**
      * @param args the command line arguments
@@ -197,8 +206,6 @@ public class productCategory extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JFormattedTextField brand_name;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -208,5 +215,7 @@ public class productCategory extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JComboBox parent_id;
     private javax.swing.JFormattedTextField product_name;
+    private javax.swing.JButton save;
+    private javax.swing.JButton showAll;
     // End of variables declaration//GEN-END:variables
 }
